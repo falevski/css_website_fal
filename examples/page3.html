@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Standard Meta -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <!-- Site Properties -->
+  <title>Sticky Example - Fomantic</title>
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/reset.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/site.css">
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/container.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/grid.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/header.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/image.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/menu.css">
+
+  <link rel="stylesheet" type="text/css" href="../dist/components/divider.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/list.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/segment.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/dropdown.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/icon.css">
+  <link rel="stylesheet" type="text/css" href="../dist/components/transition.css">
+
+  <script src="assets/library/jquery.min.js"></script>
+  <script src="../dist/components/transition.js"></script>
+  <script src="../dist/components/dropdown.js"></script>
+  <script src="../dist/components/visibility.js"></script>
+  <script>
+  $(document)
+    .ready(function() {
+
+      // fix main menu to page on passing
+      $('.main.menu').visibility({
+        type: 'fixed'
+      });
+      $('.overlay').visibility({
+        type: 'fixed',
+        offset: 80
+      });
+
+      // lazy load images
+      $('.image').visibility({
+        type: 'image',
+        transition: 'vertical flip in',
+        duration: 500
+      });
+
+      // show dropdown on hover
+      $('.main.menu  .ui.dropdown').dropdown({
+        on: 'hover'
+      });
+    })
+  ;
+  </script>
+
+  <style type="text/css">
+
+  body {
+    background-color: #fff;
+  }
+  .main.container {
+    margin-top: 2em;
+  }
+
+  .main.menu {
+    margin-top: 4em;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    transition:
+      box-shadow 0.5s ease,
+      padding 0.5s ease
+    ;
+  }
+  .main.menu .item img.logo {
+    margin-right: 1.5em;
+  }
+
+  .overlay {
+    float: left;
+    margin: 0em 3em 1em 0em;
+  }
+  .overlay .menu {
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease;
+  }
+
+  .main.menu.fixed {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+  }
+  .overlay.fixed .menu {
+    left: 800px;
+  }
+
+  .text.container .left.floated.image {
+    margin: 2em 2em 2em -4em;
+  }
+  .text.container .right.floated.image {
+    margin: 2em -4em 2em 2em;
+  }
+
+  .ui.footer.segment {
+    margin: 5em 0em 0em;
+    padding: 5em 0em;
+  }
+  </style>
+
+</head>
+<body>
+
+  <div class="ui main text container">
+    <h1 class="ui header">Роль свободного программного обеспечения в сфере медицины и здравоохранения</h1>
+    <p>Диагностические и аналитические системы, образовательные ресурсы и исследования, мобильные приложения и телемедицина</p>
+  </div>
+
+
+  <div class="ui borderless main menu">
+    <div class="ui text container">
+      <div class="header item">
+        <a href="http://med.fal.ggwp/page1.html" class="header item">
+          <img class="logo" src="assets/images/logo.png">
+          Falevskiy prod.
+        </a>
+      </div>
+      
+        <div class="ui simple dropdown item">
+          Меню <i class="dropdown icon"></i>
+          <div class="menu">
+            <a class="item" href="http://med.fal.ggwp/page2.html">Предыдущая страница</a>
+            <a class="item" href="http://med.fal.ggwp/page4.html">Следующая страница</a>
+            <div class="divider"></div>
+            <div class="header">Быстрый переход по страницам</div>
+            <a class="item" href="http://med.fal.ggwp/page1.html">1 страница</a>
+            <a class="item" href="http://med.fal.ggwp/page2.html">2 страница</a>
+            <a class="item" href="#http://med.fal.ggwp/page3.html">3 страница</a>
+            <a class="item" href="http://med.fal.ggwp/page4.html">4 страница</a>
+            <a class="item" href="http://med.fal.ggwp/page5.html">5 страница</a>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="ui text container">
+    <p><h>Использование СПО для диагностики заболеваний:</h4></p>
+    <div class="ui segment">
+      <p>СПО применяется для разработки и внедрения диагностических 
+        систем, которые используют алгоритмы и большие данные для точной 
+        диагностики заболеваний. Это позволяет улучшить качество диагностики 
+        и сделать её доступной для большего числа пациентов</p>
+    </div>    
+      <p>Примеры аналитических инструментов на основе СПО</p>
+    <div class="overlay">
+      <div class="ui labeled icon vertical menu">
+        <a href="https://practicum.yandex.ru/blog/chto-takoe-yazyk-r/" class="item"><i class="book icon"></i>R language</a>
+        <a href="https://practicum.yandex.ru/blog/vsyo-o-yazyke-programmirovaniya-python/" class="item"><i class="book icon"></i>Python</a>
+        <a href="https://www.tensorflow.org/?hl=ru" class="item"><i class="book icon"></i>TensorFlow</a>
+      </div>
+    </div>
+    <p>
+      <b>R:</b> Универсальный язык программирования, который используется 
+      для разработки различных аналитических инструментов и библиотек.
+    </p>
+    <p>
+      <b>Python:</b> СПО предоставляет гибкие и настраиваемые решения 
+      для создания систем ЭМЗ, позволяя медицинским учреждениям интегрировать 
+      их с другими системами и улучшать их функциональность.
+    </p>
+    <p>
+      <b>TensorFlow:</b> Библиотека машинного обучения, разработанная Google. Она используется для создания моделей 
+      искусственного интеллекта, которые могут применяться в диагностике заболеваний и анализе медицинских данных.
+    </p>
+    <center>
+      <iframe width="700" height="400" src="https://www.youtube.com/embed/1z0n79ZyPyY?si=8xhs8wFKKl3QP0Cb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </center>
+    <p><b>Влияние СПО на точность и доступность диагностики</b></p>
+    <img class="ui medium left floated image" data-src="assets/images/wireframe/pic4.jpg">
+    <p> </p>
+    <p>СПО позволяет улучшать алгоритмы диагностики, делая их доступными для небольших клиник и медицинских 
+      учреждений в развивающихся странах. Это способствует повышению качества медицинской помощи и снижению 
+      её стоимости</p>
+    <p><b>Образовательные ресурсы и исследования</b></p>
+    <p><b>СПО для обучения медицинских работников:</b> СПО используется для создания образовательных 
+      платформ и ресурсов, таких как виртуальные симуляторы, онлайн-курсы и интерактивные учебники. 
+      Это помогает медицинским работникам улучшать свои навыки и знания</p>
+    <img class="ui medium right floated image" data-src="assets/images/wireframe/pic5.jpg">
+    <p><b>Платформы для проведения научных исследований:</b> СПО предоставляет инструменты для обработки данных, 
+      моделирования и анализа, что способствует 
+      проведению научных исследований и открытий в медицине</p>
+    <p><b>Роль СПО в распространении знаний и повышении квалификации: </b>Роль СПО в распространении знаний и 
+      повышении квалификации</p>
+    <img class="ui medium left floated image" data-src="assets/images/wireframe/pic6.jpg">
+    <p><b>Развитие мобильных приложений на основе СПО: </b>СПО позволяет разрабатывать мобильные приложения для 
+      мониторинга здоровья, управления хроническими заболеваниями и общения с врачами. Это способствует улучшению 
+      качества медицинской помощи и повышению её доступности</p>
+    <p>
+      <b>Роль СПО в телемедицине:</b> СПО упрощает доступ к медицинским услугам, особенно в отдаленных районах, 
+      позволяя проводить консультации и диагностику на расстоянии. Это снижает затраты на медицинскую помощь и 
+      повышает её доступность для пациентов.
+    <img class="ui medium right floated image" data-src="assets/images/wireframe/pic7.png">
+    </p>
+    <p>Примеры успешных мобильных решений:</p>
+    <p>
+      <b>OpenMRS Mobile:</b> Мобильная версия системы OpenMRS для управления медицинскими записями. Она позволяет 
+      врачам и медицинским работникам получать доступ к данным пациентов в любое время и из любого места
+    </p>
+    <p>
+      <b>GNU Health HMIS:</b> Мобильное приложение для мониторинга здоровья и эпидемиологического контроля. 
+      Оно используется для отслеживания состояния здоровья пациентов и выявления вспышек заболеваний.
+    </p>
+    <a class="ui large button">Читать далее</a>
+  </div>
+
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui stackable inverted divided grid">
+        <div class="three wide column">
+          <h4 class="ui inverted header">Group 1</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            <a href="#" class="item">Link Three</a>
+            <a href="#" class="item">Link Four</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Group 2</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            <a href="#" class="item">Link Three</a>
+            <a href="#" class="item">Link Four</a>
+          </div>
+        </div>
+        <div class="three wide column">
+          <h4 class="ui inverted header">Group 3</h4>
+          <div class="ui inverted link list">
+            <a href="#" class="item">Link One</a>
+            <a href="#" class="item">Link Two</a>
+            <a href="#" class="item">Link Three</a>
+            <a href="#" class="item">Link Four</a>
+          </div>
+        </div>
+        <div class="seven wide column">
+          <h4 class="ui inverted header">Footer Header</h4>
+          <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+        </div>
+      </div>
+      <div class="ui inverted section divider"></div>
+      <img src="assets/images/logo.png" class="ui centered mini image">
+      <div class="ui horizontal inverted small divided link list">
+        <a class="item" href="#">Site Map</a>
+        <a class="item" href="#">Contact Us</a>
+        <a class="item" href="#">Terms and Conditions</a>
+        <a class="item" href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
